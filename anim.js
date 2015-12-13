@@ -27,7 +27,7 @@ exports.search = function (query, callback, waitCallback) {
 	
 	var q = {
 		q: query,
-		cx: exports.config.apiSearchID,
+		cx: exports.config.apiSearchId,
 		searchType: 'image',
 		fileType: 'gif',
 		safe: 'high',
@@ -65,7 +65,7 @@ exports.ensureExt = function (url) {
 		url += '#.png';
 	}
 	return url;
-}
+};
 
 exports.run = function(api, event) {
 	if (!exports.config.apiKey) {
@@ -73,8 +73,8 @@ exports.run = function(api, event) {
 		return;
 	}
 	
-	if (!exports.config.apiSearchID) {
-		api.sendMessage("My admin needs to give me a Google API search ID before anim will work.\nPlease set the value apiSearchID in config.json to a Google Custom Search API search engine ID.", event.thread_id);
+	if (!exports.config.apiSearchId) {
+		api.sendMessage("My admin needs to give me a Google API search Id before anim will work.\nPlease set the value apiSearchId in config.json to a Google Custom Search API search engine Id.", event.thread_id);
 		return;
 	}
 	
