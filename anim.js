@@ -1,4 +1,4 @@
-var request = require.safe('request'),
+var request = require('request'),
 	animCache = {},
 
 search = function (query, callback, waitCallback) {
